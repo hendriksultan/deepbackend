@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #047857;
+  --font-sans: "Inter", sans-serif;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+
+  /* --- JANGAN HAPUS BAGIAN INI --- */
+
+  html {
+    scroll-behavior: smooth;
+    /* Wajib: Agar saat di-tap di HP tidak muncul kotak biru/abu */
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Wajib: Agar respon klik instan (hapus delay 300ms di browser HP) */
+  button,
+  a,
+  [role="button"],
+  input[type="submit"] {
+    cursor: pointer;
+    touch-action: manipulation;
+  }
+
+  /* ------------------------------- */
+
+  /* BAGIAN @media (hover: none) ... SUDAH DIHAPUS */
+  /* Karena Anda akan pakai class manual di HTML */
+}
